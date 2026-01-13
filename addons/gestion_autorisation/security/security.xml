@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="module_category_autorisation" model="ir.module.category">
+            <field name="name">Gestion des Autorisations</field>
+            <field name="description">Niveaux d'accès pour les autorisations</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="group_autorisation_user" model="res.groups">
+            <field name="name">Utilisateur (Employé)</field>
+            <field name="category_id" ref="module_category_autorisation"/>
+        </record>
+
+        <record id="group_autorisation_manager" model="res.groups">
+            <field name="name">Responsable (Manager)</field>
+            <field name="category_id" ref="module_category_autorisation"/>
+            <field name="implied_ids" eval="[(4, ref('group_autorisation_user'))]"/>
+        </record>
+    </data>
+</odoo>

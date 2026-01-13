@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_autorisation_user,access.autorisation.user,model_gestion_autorisation,gestion_autorisation.group_autorisation_user,1,0,1,0
+access_autorisation_manager,access.autorisation.manager,model_gestion_autorisation,gestion_autorisation.group_autorisation_manager,1,1,1,1
